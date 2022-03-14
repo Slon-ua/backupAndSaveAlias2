@@ -1,5 +1,5 @@
 <?
-class URLencode() {
+class URLencode {
     $str = file_get_contents('./BackupAlias.txt', true);
 
     function myUrlEncode($str) {
@@ -18,4 +18,6 @@ class URLencode() {
     fputs($fd, $str);
     fclose($fd);
 }
+
+// $URLencode = new URLencode;
 ?>
