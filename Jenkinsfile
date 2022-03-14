@@ -60,7 +60,8 @@ pipeline {
                 sh 'node backupAlias_workWithHTML.js --idAlias $IDAlias'
                 sh 'php -v'
                 sh 'composer -V'
-                sh 'php -f URLencode.php'
+                // sh 'php -f URLencode.php'
+                sh 'phpunit -f URLencode.php'
                 // sh 'npm run api-provider_sand'
                 sh 'node editAliases.js --idAlias $IDAlias'
 
