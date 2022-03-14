@@ -41,6 +41,8 @@ pipeline {
 
                 sh 'ls -la'
                 sh 'pwd'
+                sh 'echo "$PWD - " + $PWD'
+
                 // sh 'cd 	backupAndSaveAlias2'
                 //  sh 'ls -la'
                 // sh 'pwd'
