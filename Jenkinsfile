@@ -31,12 +31,13 @@ pipeline {
                 }
                 dir("./") {
                     // git branch: 'main', url: 'git@github.com:driveroo/backupAndSaveAlias.git', credentialsId: 'Jenkins-GitHub-SSH-Key'
-            		git 'https://github.com/Slon-ua/backupAndSaveAlias2.git'
+            		// git 'https://github.com/Slon-ua/backupAndSaveAlias2.git'
                     
 
                 }
                 
                 // unstash 'NewAlias.txt'
+            		git 'https://github.com/Slon-ua/backupAndSaveAlias2.git'
 
                 sh 'ls -la'
                 sh 'pwd'
