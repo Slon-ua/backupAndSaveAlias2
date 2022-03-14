@@ -1,5 +1,5 @@
 <?
-$str = file_get_contents('./NewAlias.txt', true);
+$str = file_get_contents('./BackupAlias.txt', true);
 
 function myUrlEncode($str) {
     $entities = array('%3A+',': ','%0A_','%0Aauthenticity','%0Aalias%5','%0Acommit');
