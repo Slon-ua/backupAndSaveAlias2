@@ -30,14 +30,14 @@ pipeline {
                     currentBuild.displayName="#${BUILD_NUMBER}, ${params.ActionToRun}, ${params.DESCRIPTION}"
                 }
                 dir("./") {
-                    git branch: 'main', url: 'git@github.com:Slon-ua/backupAndSaveAlias2.git', credentialsId: '718f08ce-803f-46ce-baa1-86a0be56bc6c'
+                    // git branch: 'main', url: 'git@github.com:Slon-ua/backupAndSaveAlias2.git', credentialsId: '718f08ce-803f-46ce-baa1-86a0be56bc6c'
             		// git 'https://github.com/Slon-ua/backupAndSaveAlias2.git'
                     
 
                 }
                 
                 // unstash 'NewAlias.txt'
-            		// git 'https://github.com/Slon-ua/backupAndSaveAlias2.git'
+            		git clone 'https://github.com/Slon-ua/backupAndSaveAlias2.git'
 
                 sh 'ls -la'
                 sh 'pwd'
