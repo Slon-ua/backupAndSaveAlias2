@@ -30,7 +30,7 @@ pipeline {
                     currentBuild.displayName="#${BUILD_NUMBER}, ${params.ActionToRun}, ${params.DESCRIPTION}"
                 }
                 dir("./") {
-                    git branch: 'main', url: 'git@github.com:Slon-ua/backupAndSaveAlias2.git', credentialsId: 'Slon-ua/****** (token_github)'
+                    git branch: 'main', url: 'git@github.com:Slon-ua/backupAndSaveAlias2.git', credentialsId: 'Slon-ua'
             		// git 'https://github.com/Slon-ua/backupAndSaveAlias2.git'
                     
 
