@@ -11,7 +11,7 @@ pipeline {
         }
     }
     parameters {
-        stashedFile 'NewAlias.txt'
+        // stashedFile 'NewAlias.txt'
         string(name: 'IDAlias', defaultValue: '249', description: 'Add ID of alias from Wiser')
         // stashedFile 'fileRead.js'
         // stashedFile 'package.json'
@@ -34,12 +34,12 @@ pipeline {
                     
 
                 }
-                unstash 'NewAlias.txt'
+                // unstash 'NewAlias.txt'
 
                 sh 'ls -la'
                 sh 'pwd'
-                sh 'echo "NewAlias.txt"'
-                sh 'cat NewAlias.txt'
+                // sh 'echo "NewAlias.txt"'
+                // sh 'cat NewAlias.txt'
                 sh 'npm install'
                 sh 'npm list --depth=0'
                 // sh 'npm install newman'
