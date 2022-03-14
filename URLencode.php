@@ -1,5 +1,5 @@
 <?
-function UrlEncode() {
+function URLencode() {
     $str = file_get_contents('./BackupAlias.txt', true);
 
     function myUrlEncode($str) {
