@@ -41,7 +41,8 @@ pipeline {
 
                 sh 'ls -la'
                 sh 'pwd'
-                sh 'echo "$PWD - " + $PWD'
+                sh 'echo "PWD = " + $PWD'
+                sh 'apt install php'
 
                 // sh 'cd 	backupAndSaveAlias2'
                 //  sh 'ls -la'
