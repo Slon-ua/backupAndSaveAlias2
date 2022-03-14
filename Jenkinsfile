@@ -41,6 +41,7 @@ pipeline {
 
                 sh 'ls -la'
                 sh 'pwd'
+                sh 'cd 	backupAndSaveAlias2'
                 // sh 'echo "NewAlias.txt"'
                 // sh 'cat NewAlias.txt'
                 sh 'npm install'
