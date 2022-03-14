@@ -61,7 +61,7 @@ pipeline {
                 sh 'php -v'
                 sh 'composer -V'
                 sh 'php -f URLencode.php'
-                sh 'phpunit  URLencode.php'
+                sh 'phpunit --filter NewUrlEncode URLencode.php'
                 // sh 'npm run api-provider_sand'
                 sh 'node editAliases.js --idAlias $IDAlias'
 
