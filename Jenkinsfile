@@ -42,7 +42,7 @@ pipeline {
                 sh 'ls -la'
                 sh 'pwd'
                 sh 'echo "PWD = " + $PWD'
-                sh 'apt install php'
+                // sh 'apt install php'
 
                 // sh 'cd 	backupAndSaveAlias2'
                 //  sh 'ls -la'
@@ -59,6 +59,7 @@ pipeline {
                 sh 'echo "IDAlias = " + $IDAlias'
                 sh 'node backupAlias_workWithHTML.js --idAlias $IDAlias'
                 sh 'php -v'
+                sh 'composer -V'
                 // sh 'php -f URLencode.php'
                 // sh 'npm run api-provider_sand'
                 sh 'node editAliases.js --idAlias $IDAlias'
