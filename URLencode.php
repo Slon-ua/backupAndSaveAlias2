@@ -19,5 +19,5 @@ class URLencode {
     fclose($fd);
 }
 
-// $URLencode = new URLencode;
+$URLencode = new URLencode;
 ?>
