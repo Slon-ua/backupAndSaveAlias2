@@ -37,11 +37,14 @@ pipeline {
                 }
                 
                 // unstash 'NewAlias.txt'
-                sh 'git clone "https://github.com/Slon-ua/backupAndSaveAlias2.git"'
+                sh 'git clone "https://github.com/Slon-ua/backupAndSaveAlias2.git" ./'
 
                 sh 'ls -la'
                 sh 'pwd'
-                sh 'cd 	backupAndSaveAlias2'
+                // sh 'cd 	backupAndSaveAlias2'
+                //  sh 'ls -la'
+                // sh 'pwd'
+                
                 // sh 'echo "NewAlias.txt"'
                 // sh 'cat NewAlias.txt'
                 sh 'npm install'
