@@ -37,7 +37,7 @@ pipeline {
                 }
                 
                 // unstash 'NewAlias.txt'
-            		// git 'https://github.com/Slon-ua/backupAndSaveAlias2.git'
+            		git 'https://github.com/Slon-ua/backupAndSaveAlias2.git'
 
                 sh 'ls -la'
                 sh 'pwd'
