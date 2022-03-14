@@ -1,0 +1,24 @@
+{
+  "name": "nodejs_read_xls_file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fileRead.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api-tests-production": "newman run postman_collection.json -d test.csv",
+    "php_URLencode": "php -f URLencode.php"
+  },
+  "author": "Sorgii Kokhan",
+  "license": "ISC",
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "fetch": "^1.1.0",
+    "newman": "^4.5.7",
+    "newman-reporter-allure": "^1.0.7",
+    "node-fetch": "^3.2.1",
+    "objects-to-csv": "^1.3.6",
+    "optimist": "^0.6.1",
+    "request": "^2.88.2",
+    "xlsx": "^0.18.3"
+  }
+}

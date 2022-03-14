@@ -1,0 +1,45 @@
+utf8: ✓
+_method: patch
+authenticity_token: vLjiaSBAgcYVLytJ8/kVvsQi1EDaWIO8jyVKSYEwsytCqxBZ3c08Sj8tWbASxWU2SpB7J3hp9gPJ9z9p5+QBaw==
+alias[name]: ALIAS{AQA_TEST_BLOCK}
+alias[value]: ALIAS{CAR_TYPE_BLOCK}
+ALIAS{FUEL_BLOCK}
+
+isAQA_TEST_Pre = ['s-aqa-test-pre'].include?(data['service.system_name'].to_s.downcase);
+isAQA_TEST_Post = ['s-aqa-test-post'].include?(data['service.system_name'].to_s.downcase);
+isAQA_TEST_Trailer_Inspection = ['s-aqa-test-trailer'].include?(data['service.system_name'].to_s.downcase);
+isAQA_TEST_Pre_Post = isAQA_TEST_Pre || isAQA_TEST_Post
+
+isAQA_TEST_Truck_Trailer = ['yes'].include?(data['f-aqa-test-trailer-insp'].to_s.downcase);
+
+
+FuelOther = !fuelGas && !fuelDiesel
+
+VEH_MODEL = 'vinaudit.spetifications.model'
+VEH_MAKE = 'vinaudit.spetifications.make'
+
+isTractorSleeper = isCarType['isTractorSleeper']
+isTractorDayCab = isCarType['isTractorDayCab']
+isDryTrailer = isCarType['isDryTrailer']
+isOtherVehicle = !isTractorSleeper && !isTractorDayCab
+isOtherTrailer = !isCarType['isDryTrailer']
+
+
+isAQA_TEST_COVID                                        = false#isAQA_TEST_Pre
+isAQA_TEST_UNIFORM                                      = isAQA_TEST_Pre  
+isAQA_TEST_DASHBOARD_GAS                                = false#isAQA_TEST_Pre_Post && fuelGas
+isAQA_TEST_DASHBOARD_DIESEL                             = isAQA_TEST_Pre_Post && (fuelDiesel || FuelOther)
+isAQA_TEST_FUEL                                         = false#isAQA_TEST_Pre_Post
+isAQA_TEST_DEF                                          = false#isAQA_TEST_Pre_Post && fuelDiesel
+isAQA_TEST_WALKAROUND_TRACTOR_SLEEPER                   = isAQA_TEST_Pre_Post && isTractorSleeper
+isAQA_TEST_WALKAROUND_TRACTOR_DAY_CAB                   = isAQA_TEST_Pre_Post && isTractorDayCab
+isAQA_TEST_WALKAROUND_OTHER_VEHICLE                     = isAQA_TEST_Pre_Post && isOtherVehicle
+isAQA_TEST_WALKAROUND_DRY_TRAILER                       = false#isAQA_TEST_Pre_Post && isAQA_TEST_Truck_Trailer
+isAQA_TEST_CLEANLINESS                                  = isAQA_TEST_Pre_Post
+isAQA_TEST_ASSET_ON_BOARD                               = isAQA_TEST_Pre_Post
+isAQA_TEST_WALKAROUND_SINGLE_INSP_DRY_TRAILER           = isAQA_TEST_Trailer_Inspection
+isAQA_TEST_WALKAROUND_OTHER_TRAILER                     = isAQA_TEST_Trailer_Inspection && isOtherTrailer
+isAQA_TEST_TRAILER_MECHANICAL_CONDITION                 = false#isAQA_TEST_Pre_Post && isAQA_TEST_Truck_Trailer 
+isAQA_TEST_SINGLE_INSP_TRAILER_MECHANICAL_CONDITION     = false#isAQA_TEST_Trailer_Inspection
+isAQA_TEST_SIGNATURE                                    = isAQA_TEST_Pre_Post || isAQA_TEST_Trailer_Inspection
+commit: Update Alias
