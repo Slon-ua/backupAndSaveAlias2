@@ -61,7 +61,7 @@ pipeline {
                 sh 'php -v'
                 sh 'composer -V'
                 sh 'php -f /var/jenkins_home/workspace/URLencode/URLencode.php'
-                sh 'phpunit --filter NewUrlEncode /var/jenkins_home/workspace/URLencode/URLencode.php'
+                // sh 'phpunit --filter NewUrlEncode /var/jenkins_home/workspace/URLencode/URLencode.php'
                 // sh 'npm run api-provider_sand'
                 sh 'node editAliases.js --idAlias $IDAlias'
 
