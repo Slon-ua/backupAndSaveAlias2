@@ -16,4 +16,4 @@
     $fd = fopen("NewURLencode.txt", 'w');
     fputs($fd, $str);
     fclose($fd);
-/?>
+?>
